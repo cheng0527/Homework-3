@@ -1,0 +1,266 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://underscorejs.org/underscore-min.js"></script>
+    <script src="homework3.js"></script>
+    <style>
+        div {
+            margin-bottom: 30px;
+            border: 1px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="exercise1">
+    <h1>Test for exercise1</h1>
+    <p>
+        Average for [-5.25,23,34,100,-12,12.231] is
+        <script>
+            document.write(exercise1([-5.25, 23, 34, 100, -12, 12.231]));
+        </script>
+    </p>
+    <p>
+        Average for [] is
+        <script>
+            document.write(exercise1([]));
+        </script>
+    </p>
+</div>
+
+
+<div id="exercise2">
+    <h1>Test for exercise2</h1>
+    <p>
+        The biggest number for [-5.25,23,34,100,-12,12.231] is
+        <script>
+            document.write(exercise2([-5.25, 23, 34, 100, -12, 12.231]));
+        </script>
+    </p>
+    <p>
+        The biggest number for [] is
+        <script>
+            document.write(exercise2([]));
+        </script>
+    </p>
+
+    <p>
+        The biggest number using underscore::max for [-5.25,23,34,100,-12,12.231] is
+        <script>
+            document.write(_.max([-5.25, 23, 34, 100, -12, 12.231]));
+        </script>
+    </p>
+    <p>
+        The biggest number using underscore::max for[] is
+        <script>
+            document.write(_.max([]));
+        </script>
+    </p>
+</div>
+
+<div id="exercise3">
+    <h1>Test for exercise3</h1>
+    <p>
+        Even number exists in [-5.25,23,34,100,-12,12.231] ?
+        <script>
+            document.write(exercise3([-5.25, 23, 34, 100, -12, 12.231]));
+        </script>
+    </p>
+    <p>
+        Even number exists in [-1,-3,-5,6.2] ?
+        <script>
+            document.write(exercise3([-1, -3, -5, 6.2]));
+        </script>
+    </p>
+    <p>
+        Even number exists in []?
+        <script>
+            document.write(exercise3([]));
+        </script>
+    </p>
+
+
+    <p>
+        Even number exists in [-5.25,23,34,100,-12,12.231] using underscore::find ?
+        <script>
+            document.write(_.any([-5.25, 23, 34, 100, -12, 12.231], function (num) {
+                return num % 2 == 0;
+            }));
+        </script>
+    </p>
+
+
+    <p>
+        Even number exists in [-1,-3,-5,6.2] using underscore::find ?
+        <script>
+            document.write(_.any([-1, -3, -5, 6.2], function (num) {
+                return num % 2 == 0;
+            }));
+        </script>
+    </p>
+
+    <p>
+        Even number exists in [] using underscore::max ?
+        <script>
+            document.write(_.any([], function (num) {
+                return num % 2 == 0;
+            }));
+        </script>
+    </p>
+</div>
+
+<div id="exercise4">
+    <h1>Test for exercise4</h1>
+    <p>
+        Every element in [2,4,6,-2,-4,0] is even ?
+        <script>
+            document.write(exercise4([2, 4, 6, -2, -4, 0]));
+        </script>
+    </p>
+    <p>
+        Every element in [-1,-3,-5,6.2] is even ?
+        <script>
+            document.write(exercise4([-1, -3, -5, 6.2]));
+        </script>
+    </p>
+    <p>
+        Every element in [] is even ?
+        <script>
+            document.write(exercise4([]));
+        </script>
+    </p>
+
+
+    <p>
+        Every number in [2,4,6,-2,-4,0]] is even using underscore::find ?
+        <script>
+            document.write(_.every([2, 4, 6, -2, -4, 0], function (num) {
+                return num % 2 == 0;
+            }));
+        </script>
+    </p>
+
+
+    <p>
+        Every number in [-1,-3,-5,6.2] is even using underscore::find ?
+        <script>
+            document.write(_.every([-1, -3, -5, 6.2], function (num) {
+                return num % 2 == 0;
+            }));
+        </script>
+    </p>
+
+    <p>
+        Every number in [] using underscore::max is even ?
+        <script>
+            document.write(_.every([], function (num) {
+                return num % 2 == 0;
+            }));
+        </script>
+    </p>
+</div>
+
+<div id="arrayContains">
+    <h1>Test for arrayContains</h1>
+    <p>
+        ["hello","world"] contains "hello" ?
+        <script>
+            document.write(arrayContains(["hello", "world"], "hello"));
+        </script>
+    </p>
+
+    <p>
+        ["hello","world"] contains "hello123" ?
+        <script>
+            document.write(arrayContains(["hello", "world"], "hello123"));
+        </script>
+    </p>
+
+    <p>
+        ["hello","world","hello","hola"] contains "hello" ?
+        <script>
+            document.write(arrayContains(["hello", "world", "hello", "hola"], "hello"));
+        </script>
+    </p>
+</div>
+
+<div id="arrayContainsTwo">
+    <h1>Test for arrayContainsTwo</h1>
+    <p>
+        ["hello","world"] contains at least two "hello" ?
+        <script>
+            document.write(arrayContainsTwo(["hello", "world"], "hello"));
+        </script>
+    </p>
+
+    <p>
+        ["hello","world"] contains at least two "hello123" ?
+        <script>
+            document.write(arrayContainsTwo(["hello", "world"], "hello123"));
+        </script>
+    </p>
+
+    <p>
+        ["hello","world","hello","hola"] contains at least two "hello" ?
+        <script>
+            document.write(arrayContainsTwo(["hello", "world", "hello", "hola"], "hello"));
+        </script>
+    </p>
+
+    <p>
+        ["hello","world","hello","hola","hello"] contains at least two "hello" ?
+        <script>
+            document.write(arrayContainsTwo(["hello", "world", "hello", "hola", "hello"], "hello"));
+        </script>
+    </p>
+</div>
+
+<div>
+    <h1>Test for arrayContainsNTimes</h1>
+    <p>
+        arrayContainsNTimes(["a","b","a","c","a"], "a", 3) ?
+        <script>
+            document.write(arrayContainsNTimes(["a", "b", "a", "c", "a"], "a", 3));
+        </script>
+    </p>
+
+    <p>
+        arrayContainsNTimes(["a","b","a","c","a"], "a", 2) ?
+        <script>
+            document.write(arrayContainsNTimes(["a", "b", "a", "c", "a"], "a", 2));
+        </script>
+    </p>
+
+    <p>
+        arrayContainsNTimes(["a","b","a","c","a"], "a", 4) ?
+        <script>
+            document.write(arrayContainsNTimes(["a", "b", "a", "c", "a"], "a", 4));
+        </script>
+    </p>
+
+    <p>
+        arrayContainsNTimes(["a","b","a","c","a"], "b", 2) ?
+        <script>
+            document.write(arrayContainsNTimes(["a", "b", "a", "c", "a"], "b", 2));
+        </script>
+    </p>
+
+    <p>
+        arrayContainsNTimes(["a","b","a","c","a"], "b", 1) ?
+        <script>
+            document.write(arrayContainsNTimes(["a", "b", "a", "c", "a"], "b", 1));
+        </script>
+    </p>
+
+    <p>
+        arrayContainsNTimes(["a","b","a","c","a"], "d", 0) ?
+        <script>
+            document.write(arrayContainsNTimes(["a", "b", "a", "c", "a"], "d", 0));
+        </script>
+    </p>
+
+</div>
+
+</body>
+</html>
